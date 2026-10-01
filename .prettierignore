@@ -3,3 +3,4 @@ LICENSE
 .next/
 coverage/
 supabase/.temp/
+AGENTS.md

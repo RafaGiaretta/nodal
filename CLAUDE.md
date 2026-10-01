@@ -134,6 +134,8 @@ Credenciais do LinkedIn ficam configuradas no painel do Supabase, não no reposi
 
 ## Regras de trabalho para o Claude Code
 
+- O Next.js do projeto (16.x) tem APIs diferentes das versões anteriores. Antes de escrever código Next, consulte o guia em node_modules/next/dist/docs/, conforme @AGENTS.md. Não edite o AGENTS.md: o next dev mantém aquele bloco.
+- Supabase CLI roda via `pnpm exec supabase` (dependência do projeto), com atalhos `pnpm db:*`.
 - Nunca commitar segredos, chaves ou arquivos .env. Se encontrar algum, pare e avise.
 - Toda mudança de banco é feita por migration versionada em supabase/migrations, nunca alterando o banco remoto direto.
 - Antes de concluir um item, rode lint, testes e build localmente e confira o critério de aceite do backlog.
