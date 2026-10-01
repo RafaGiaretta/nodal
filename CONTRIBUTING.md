@@ -4,9 +4,9 @@ Obrigado pelo interesse no Nodal. Este guia explica como propor mudanças.
 
 ## Antes de começar
 
-* Procure uma issue existente ou abra uma nova descrevendo o problema ou a ideia.
-* Itens planejados estão em [docs/backlog.md](docs/backlog.md), cada um com um ID (por exemplo 1.2.1.3) e um critério de aceite.
-* Decisões de arquitetura ficam em [docs/adr](docs/adr). Se a sua mudança altera uma delas, proponha um ADR novo.
+- Procure uma issue existente ou abra uma nova descrevendo o problema ou a ideia.
+- Itens planejados estão em [docs/backlog.md](docs/backlog.md), cada um com um ID (por exemplo 1.2.1.3) e um critério de aceite.
+- Decisões de arquitetura ficam em [docs/adr](docs/adr). Se a sua mudança altera uma delas, proponha um ADR novo.
 
 ## Fluxo de trabalho
 
@@ -34,9 +34,9 @@ Nunca faça push direto na `main`.
 
 ## Banco de dados
 
-* Toda mudança de schema é feita por migration em `supabase/migrations`. Nunca altere o banco remoto direto.
-* Toda política de Row Level Security nova ou alterada precisa de teste automatizado.
-* O papel de admin nunca é atribuído pela API.
+- Toda mudança de schema é feita por migration em `supabase/migrations`. Nunca altere o banco remoto direto.
+- Toda política de Row Level Security nova ou alterada precisa de teste automatizado.
+- O papel de admin nunca é atribuído pela API.
 
 ## Segredos
 
