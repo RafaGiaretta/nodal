@@ -37,6 +37,8 @@ Nunca faça push direto na `main`.
 - Toda mudança de schema é feita por migration em `supabase/migrations`. Nunca altere o banco remoto direto.
 - Toda política de Row Level Security nova ou alterada precisa de teste automatizado.
 - O papel de admin nunca é atribuído pela API.
+- Testes de banco ficam em `supabase/tests/database`, um arquivo por área, e rodam com `pnpm test:db` (exige `pnpm db:start`). Cada arquivo define os helpers `pg_temp.login(uid)` e `pg_temp.login_anon()` para simular usuários e volta ao papel `postgres` com `reset role`.
+- Ao adicionar coluna em tabela com permissão por coluna (perfis, temas, itens e fontes), inclua a coluna no `grant` correspondente.
 
 ## Segredos
 
