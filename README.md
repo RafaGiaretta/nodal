@@ -36,8 +36,7 @@ Requisitos:
 
 - Node.js LTS (24 ou superior)
 - pnpm 10 ou superior
-- Docker, para o Supabase local
-- [Supabase CLI](https://supabase.com/docs/guides/local-development/cli/getting-started)
+- Docker, para o Supabase local (a Supabase CLI vem como dependência do projeto)
 - git
 
 Passos:
@@ -47,11 +46,25 @@ git clone https://github.com/RafaGiaretta/nodal.git
 cd nodal
 pnpm install
 cp .env.example .env.local   # preencha com as chaves do Supabase local
-supabase start               # sobe o banco local e aplica as migrations
+pnpm db:start                # sobe o Supabase local e aplica as migrations
 pnpm dev                     # abre em http://localhost:3000
 ```
 
-A aplicação Next.js e o Supabase local ainda estão sendo configurados (item 1.1.2.2 do backlog). Até lá, apenas `pnpm install` e `pnpm format:check` funcionam.
+`pnpm db:start` mostra a URL e as chaves locais para preencher o `.env.local`. O Studio fica em http://127.0.0.1:54323.
+
+Outros comandos:
+
+| Comando             | O que faz                                                                |
+| ------------------- | ------------------------------------------------------------------------ |
+| `pnpm db:reset`     | Recria o banco local do zero, aplicando migrations e `supabase/seed.sql` |
+| `pnpm db:status`    | Mostra URLs e chaves do ambiente local                                   |
+| `pnpm db:stop`      | Para os containers do Supabase                                           |
+| `pnpm lint`         | ESLint, sem tolerar avisos                                               |
+| `pnpm typecheck`    | Gera os tipos de rota do Next.js e roda o TypeScript                     |
+| `pnpm test`         | Testes unitários (Vitest)                                                |
+| `pnpm test:db`      | Testes pgTAP do banco, inclusive RLS (exige `pnpm db:start`)             |
+| `pnpm format:check` | Confere a formatação com Prettier                                        |
+| `pnpm build`        | Build de produção                                                        |
 
 ## Como contribuir
 
