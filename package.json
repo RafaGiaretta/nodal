@@ -19,7 +19,9 @@
     "db:start": "supabase start",
     "db:stop": "supabase stop",
     "db:reset": "supabase db reset",
-    "db:status": "supabase status"
+    "db:status": "supabase status",
+    "test": "vitest run",
+    "test:db": "supabase test db"
   },
   "lint-staged": {
     "*": "prettier --write --ignore-unknown"
@@ -37,7 +39,8 @@
     "lint-staged": "^17.6.0",
     "prettier": "^3.9.9",
     "supabase": "^2.119.0",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "vitest": "^5.0.3"
   },
   "dependencies": {
     "next": "16.3.8",
