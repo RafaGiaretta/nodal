@@ -61,6 +61,8 @@ Outros comandos:
 | `pnpm db:stop`      | Para os containers do Supabase                                           |
 | `pnpm lint`         | ESLint, sem tolerar avisos                                               |
 | `pnpm typecheck`    | Gera os tipos de rota do Next.js e roda o TypeScript                     |
+| `pnpm test`         | Testes unitários (Vitest)                                                |
+| `pnpm test:db`      | Testes pgTAP do banco, inclusive RLS (exige `pnpm db:start`)             |
 | `pnpm format:check` | Confere a formatação com Prettier                                        |
 | `pnpm build`        | Build de produção                                                        |
 
