@@ -88,16 +88,19 @@ Triggers previstas:
 
 ## Decisões tomadas
 
-| Tema                   | Decisão                                                                                                    |
-| ---------------------- | ---------------------------------------------------------------------------------------------------------- |
-| Formato                | Plataforma multiusuário desde o primeiro dia, com lançamento único contendo todas as features              |
-| Quadrante              | Pertence ao item de cada usuário                                                                           |
-| Votos de anel          | Visíveis individualmente                                                                                   |
-| Radar da comunidade    | Ranking relativo pela proporção de radares que têm o tema, sem número mínimo fixo                          |
-| Exclusão de conta      | O usuário escolhe anonimizar ou remover as contribuições antes de excluir; dados pessoais sempre removidos |
-| Nome                   | Nodal, provisório                                                                                          |
-| Idioma da interface    | Português do Brasil, com estrutura de i18n pronta para inglês (ADR 0004)                                   |
-| Gerenciador de pacotes | pnpm (ADR 0001)                                                                                            |
+| Tema                   | Decisão                                                                                                                |
+| ---------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| Formato                | Plataforma multiusuário desde o primeiro dia, com lançamento único contendo todas as features                          |
+| Quadrante              | Pertence ao item de cada usuário                                                                                       |
+| Votos de anel          | Visíveis individualmente                                                                                               |
+| Radar da comunidade    | Ranking relativo pela proporção de radares que têm o tema, sem número mínimo fixo                                      |
+| Exclusão de conta      | O usuário escolhe anonimizar ou remover as contribuições antes de excluir; dados pessoais sempre removidos             |
+| Nome                   | Nodal, provisório                                                                                                      |
+| Idioma da interface    | Português do Brasil, com estrutura de i18n pronta para inglês (ADR 0004)                                               |
+| Gerenciador de pacotes | pnpm (ADR 0001)                                                                                                        |
+| Normalização de temas  | Minúsculas, sem acento, sem espaços, pontos, hífens e sublinhados; mantém # e + (ADR 0005)                             |
+| Motivo de movimentação | Coluna transitória radar_items.move_reason enviada no mesmo PATCH; criação gera registro inicial sem motivo (ADR 0005) |
+| Tabelas de interação   | RLS habilitado sem políticas até a etapa 2 (ADR 0005)                                                                  |
 
 ## Decisões em aberto
 
