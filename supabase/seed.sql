@@ -1,0 +1,1 @@
+-- Dados de desenvolvimento aplicados após as migrations em supabase db reset.
